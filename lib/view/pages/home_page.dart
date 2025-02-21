@@ -1,34 +1,10 @@
 import 'package:dripp/events/post/scroll.dart';
+import 'package:dripp/view/pages/account_page.dart';
+import 'package:dripp/view/pages/groups_page.dart';
+import 'package:dripp/view/pages/messages_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'post_widget.dart';
-
-class MessagesScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child:
-            Text("Messages", style: Theme.of(context).textTheme.headlineLarge));
-  }
-}
-
-class GroupsScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child:
-            Text("Groups", style: Theme.of(context).textTheme.headlineLarge));
-  }
-}
-
-class AccountScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-        child:
-            Text("Account", style: Theme.of(context).textTheme.headlineLarge));
-  }
-}
+import '../widgets/post_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -36,8 +12,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late ScrollController _scrollController;
-  late PostFeedBloc _postFeedBloc;
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [

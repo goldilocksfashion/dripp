@@ -1,7 +1,6 @@
-import 'package:dripp/home_page.dart';
+import 'package:dripp/view/pages/home_page.dart';
 import 'package:flutter/material.dart';
-import 'package:dripp/config/theme.dart';
-import 'package:dripp/app.dart';
+import 'package:dripp/view/config/theme.dart';
 
 class DrippApp extends StatelessWidget {
   @override

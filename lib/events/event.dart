@@ -1,8 +1,8 @@
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:rxdart/rxdart.dart';
-
 enum EventSegmentFormat { text, image, video }
 
+/// Event segments are the building blocks of an event.
+/// They can be text, images, or videos that are packaged
+/// neatly with a title and emanate from a widget or view typically.
 class EventSegment {
   final String title;
   final EventSegmentFormat format;
@@ -18,6 +18,7 @@ class EventSegment {
       this.imageUrl});
 }
 
+/// Text event segment is a text post fragment.
 class TextSegment extends EventSegment {
   TextSegment({required String title, required String content})
       : super(title: title, format: EventSegmentFormat.text, content: content);
@@ -39,18 +40,4 @@ abstract class Event {
   final String id;
   final String private_key;
   Event(this.id, this.private_key); // All events will have a private key
-}
-
-/// A post is a central event in Dripp.
-class PostEvent extends Event {
-  final String title;
-  final String description;
-  final List<EventSegment> segments;
-  PostEvent(
-    super.id,
-    super.private_key,
-    this.segments, {
-    required this.title,
-    required this.description,
-  });
 }
