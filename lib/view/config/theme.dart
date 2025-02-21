@@ -1,5 +1,78 @@
 import 'package:flutter/material.dart';
 
+final ThemeData davidLynchTheme = ThemeData(
+  useMaterial3: true,
+  brightness: Brightness.dark,
+  scaffoldBackgroundColor: Color(0xFF1E1B29), // Deep Dark Purple-Black
+  primaryColor: Color(0xFF8F2D56), // Moody Magenta
+  secondaryHeaderColor: Color(0xFF2C233A), // Darker Purple-Black
+  appBarTheme: AppBarTheme(
+    color: Color(0xFF1E1B29), // Same as background (dreamy)
+    elevation: 0,
+    titleTextStyle: TextStyle(
+      fontFamily: 'SpaceGrotesk',
+      fontSize: 20,
+      fontWeight: FontWeight.bold,
+      color: Color(0xFFE6E6FA), // Lavender white
+    ),
+  ),
+
+  textTheme: TextTheme(
+    headlineLarge: TextStyle(
+        fontFamily: 'SpaceGrotesk',
+        fontSize: 32,
+        fontWeight: FontWeight.bold,
+        color: Color(0xFFE6E6FA)), // Dreamlike Lavender
+
+    headlineSmall: TextStyle(
+        fontFamily: 'SpaceGrotesk',
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
+        color: Color(0xFFE6E6FA)),
+
+    bodyLarge: TextStyle(
+        fontFamily: 'Inter',
+        fontSize: 16,
+        fontWeight: FontWeight.normal,
+        color: Color(0xFFE6E6FA)),
+
+    bodyMedium: TextStyle(
+        fontFamily: 'Inter',
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
+        color: Color(0xFFFF9F1C)), // Neon Orange for contrast
+
+    bodySmall: TextStyle(
+        fontFamily: 'Inter',
+        fontSize: 14,
+        fontWeight: FontWeight.normal,
+        color: Color(0xFFB0A8BA)), // Muted Lilac Grey
+  ),
+
+  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    backgroundColor: Color(0xFF1E1B29), // Blends into dark mood
+    selectedItemColor: Color(0xFFFF9F1C), // Neon Orange Highlight
+    unselectedItemColor: Color(0xFFB0A8BA), // Muted Lilac Grey
+  ),
+
+  floatingActionButtonTheme: FloatingActionButtonThemeData(
+    backgroundColor: Color(0xFF8F2D56), // Magenta for Lynchian contrast
+    foregroundColor: Color(0xFFE6E6FA), // Light ethereal text/icon
+  ),
+
+  inputDecorationTheme: InputDecorationTheme(
+    filled: true,
+    fillColor: Color(0xFF2C233A), // Slightly lighter dark
+    hintStyle: TextStyle(color: Color(0xFFB0A8BA)),
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Color(0xFF8F2D56)), // Magenta
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Color(0xFFFF9F1C)), // Neon Orange
+    ),
+  ),
+);
+
 ThemeData appTheme = ThemeData(
   useMaterial3: true,
   brightness: Brightness.light, // Ensure a light dreamy theme

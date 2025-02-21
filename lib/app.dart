@@ -7,7 +7,7 @@ class DrippApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: appTheme,
+      theme: davidLynchTheme,
       home: HomeScreen(),
     );
   }
