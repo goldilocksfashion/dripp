@@ -51,5 +51,10 @@
 <string>We need access to your camera to let you take pictures.</string>
 <key>NSMicrophoneUsageDescription</key>
 <string>We need access to your microphone to record videos.</string>
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
 </dict>
 </plist>

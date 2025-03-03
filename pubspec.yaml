@@ -1,35 +1,39 @@
 name: dripp
 description: "Decentralized, Peer to Peer, privacy focussed Social Network"
 publish_to: 'none'
-uses-material-design: true
 version: 1.0.0+1
 environment:
   sdk: ^3.6.0
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  google_fonts: ^6.2.1
   flutter_bloc: ^9.0.0
-  rxdart: ^0.28.0
-  image_picker: ^1.1.2
-  video_player: ^2.9.2
   flutter_launcher_icons: ^0.14.3
+  flutter_svg: ^2.0.17
+  google_fonts: ^6.2.1
+  rxdart: ^0.28.0
+  video_player: ^2.9.3
 
 flutter_icons:
   android: true
   ios: true
-  macos: true
-  windows: true
-  linux: true
-  web: true
+  remove_alpha_ios: true
+  adaptive_icon_background: "#ffffff"
   image_path: "assets/icon.png"
+  adaptive_icon_foreground: "assets/icon.png"
 
 flutter:
+  uses-material-design: true
+  # Add assets section to properly include your icon files
+  assets:
+  - assets/
+  - assets/icons/
+  - assets/icon.png
+  - assets/images/
+  - assets/images/image.png
+  - assets/images/image-1.png
+
   fonts:
-  - family: MaterialIcons
-    fonts:
-    - asset: assets/fonts/MaterialIcons-Regular.ttf
   - family: SpaceGrotesk
     fonts:
     - asset: assets/fonts/SpaceGrotesk-Regular.ttf

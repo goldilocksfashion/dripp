@@ -1,158 +1,126 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-final ThemeData davidLynchTheme = ThemeData(
+IconThemeData iconTheme = const IconThemeData(
+  color: Color(0xFFFFD700), // Gold color for all icons
+);
+
+ThemeData memorializedMonokaiTheme = ThemeData(
   useMaterial3: true,
   brightness: Brightness.dark,
-  scaffoldBackgroundColor: Color(0xFF1E1B29), // Deep Dark Purple-Black
-  primaryColor: Color(0xFF8F2D56), // Moody Magenta
-  secondaryHeaderColor: Color(0xFF2C233A), // Darker Purple-Black
-  appBarTheme: AppBarTheme(
-    color: Color(0xFF1E1B29), // Same as background (dreamy)
-    elevation: 0,
-    titleTextStyle: TextStyle(
-      fontFamily: 'SpaceGrotesk',
-      fontSize: 20,
-      fontWeight: FontWeight.bold,
-      color: Color(0xFFE6E6FA), // Lavender white
-    ),
+  scaffoldBackgroundColor: Color(0xFF28261E), // Darker, aged paper background
+
+  // Modify color scheme for washed-out golden tones
+  colorScheme: ColorScheme.dark(
+    primary: Color(0xFFD4AF37), // Golden color
+    secondary: Color(0xFFBDA55D), // Secondary gold
+    tertiary: Color(0xFFAA8C55), // Bronze tone
+    surface: Color(0xFF2A2A25), // Slightly warm surface
+    background: Color(0xFF28261E), // Aged dark background
   ),
 
+  // Washed-out golden memorabilia style text
   textTheme: TextTheme(
-    headlineLarge: TextStyle(
-        fontFamily: 'SpaceGrotesk',
-        fontSize: 32,
-        fontWeight: FontWeight.bold,
-        color: Color(0xFFE6E6FA)), // Dreamlike Lavender
-
-    headlineSmall: TextStyle(
-        fontFamily: 'SpaceGrotesk',
-        fontSize: 20,
-        fontWeight: FontWeight.w600,
-        color: Color(0xFFE6E6FA)),
-
-    bodyLarge: TextStyle(
-        fontFamily: 'Inter',
-        fontSize: 16,
-        fontWeight: FontWeight.normal,
-        color: Color(0xFFE6E6FA)),
-
-    bodyMedium: TextStyle(
-        fontFamily: 'Inter',
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
-        color: Color(0xFFFF9F1C)), // Neon Orange for contrast
-
-    bodySmall: TextStyle(
-        fontFamily: 'Inter',
-        fontSize: 14,
-        fontWeight: FontWeight.normal,
-        color: Color(0xFFB0A8BA)), // Muted Lilac Grey
-  ),
-
-  bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    backgroundColor: Color(0xFF1E1B29), // Blends into dark mood
-    selectedItemColor: Color(0xFFFF9F1C), // Neon Orange Highlight
-    unselectedItemColor: Color(0xFFB0A8BA), // Muted Lilac Grey
-  ),
-
-  floatingActionButtonTheme: FloatingActionButtonThemeData(
-    backgroundColor: Color(0xFF8F2D56), // Magenta for Lynchian contrast
-    foregroundColor: Color(0xFFE6E6FA), // Light ethereal text/icon
-  ),
-
-  inputDecorationTheme: InputDecorationTheme(
-    filled: true,
-    fillColor: Color(0xFF2C233A), // Slightly lighter dark
-    hintStyle: TextStyle(color: Color(0xFFB0A8BA)),
-    enabledBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Color(0xFF8F2D56)), // Magenta
+    headlineLarge: GoogleFonts.ibmPlexSerif(
+      // Changed to serif for vintage feel
+      fontSize: 32,
+      fontWeight: FontWeight.w300,
+      color: Color(0xFFF8E7C3), // Warm, slightly golden off-white
+      letterSpacing: 0.5, // Slightly increased spacing for vintage feel
     ),
-    focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Color(0xFFFF9F1C)), // Neon Orange
+    headlineSmall: GoogleFonts.ibmPlexSerif(
+      fontSize: 22,
+      fontWeight: FontWeight.w300,
+      color: Color(0xFFF8E7C3),
+      letterSpacing: 0.3,
+    ),
+    bodyLarge: GoogleFonts.ibmPlexSans(
+      fontSize: 18,
+      fontWeight: FontWeight.w300, // Slightly heavier for aged paper look
+      color: Color(0xFFE8DAB2), // Warm, muted color
+      letterSpacing: 0.2,
+    ),
+    bodyMedium: GoogleFonts.ibmPlexSans(
+      fontSize: 16,
+      fontWeight: FontWeight.w300,
+      color: Color(0xFFCFB991), // Washed-out gold
+      letterSpacing: 0.1,
+    ),
+    bodySmall: GoogleFonts.ibmPlexSans(
+      fontSize: 14,
+      fontWeight: FontWeight.w300,
+      color: Color(0xFFBDA87C), // Muted golden brown
+    ),
+  ),
+
+  // Card styling for vintage feel
+  cardTheme: CardTheme(
+    color: Color(0xFF2A2722), // Slightly warmer than background
+    elevation: 2,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(8),
+      side: BorderSide(
+        color: Color(0xFF3E3A32).withOpacity(0.6), // Subtle vintage border
+        width: 1,
+      ),
+    ),
+  ),
+
+  // Icon theme with golden tones
+  iconTheme: IconThemeData(
+    color: Color(0xFFD4AF37)
+        .withOpacity(0.8), // Golden icons with slight transparency
+    size: 24,
+  ),
+
+  // Button styling
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Color(0xFF2A2722),
+      foregroundColor: Color(0xFFD4AF37),
+      elevation: 1,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+        side: BorderSide(
+          color: Color(0xFFD4AF37).withOpacity(0.4),
+          width: 1,
+        ),
+      ),
     ),
   ),
 );
 
-ThemeData appTheme = ThemeData(
+ThemeData monokaiTheme = ThemeData(
   useMaterial3: true,
-  brightness: Brightness.light, // Ensure a light dreamy theme
-  scaffoldBackgroundColor: Color(0xFFE6E9F0), // Misty Light Blue-Gray
-  primaryColor: Color(0xFFA69CAC), // Muted Lavender
-  secondaryHeaderColor: Color(0xFFD4C1EC), // Faded Orchid
-  hintColor: Color(0xFFFCEEB5), // Faint Sunlight Gold for highlights
+  brightness: Brightness.dark,
+  scaffoldBackgroundColor: Color(0xFF272822), // Monokai Gray
 
-  /// **App Bar Theme (Soft, Low Contrast)**
-  appBarTheme: AppBarTheme(
-    backgroundColor: Color(0xFFE6E9F0), // Soft Foggy Blue
-    elevation: 1,
-    shadowColor: Color(0xFFD4C1EC).withOpacity(0.3), // Gentle shadow
-    titleTextStyle: TextStyle(
-      fontFamily: 'SpaceGrotesk',
-      fontSize: 22,
-      fontWeight: FontWeight.w500,
-      color: Color(0xFF3A3A3A), // Soft dark for balance
-    ),
-    iconTheme: IconThemeData(color: Color(0xFF3A3A3A)),
-  ),
-
-  /// **Text Theme (Dreamy, Minimal, Ethereal)**
+  /// **🔹 Apply IBM Plex Sans for a Clean, Professional Look**
   textTheme: TextTheme(
-    headlineLarge: TextStyle(
-      fontFamily: 'SpaceGrotesk',
+    headlineLarge: GoogleFonts.ibmPlexSans(
       fontSize: 32,
-      fontWeight: FontWeight.w600,
-      color: Color(0xFF3A3A3A), // Soft Dark (Balanced)
+      fontWeight: FontWeight.w300, // ✅ Soft, elegant, readable
+      color: Color(0xFFF8F8F2), // Monokai Off-White
     ),
-    headlineSmall: TextStyle(
-      fontFamily: 'SpaceGrotesk',
-      fontSize: 20,
-      fontWeight: FontWeight.w500,
-      color: Color(0xFF3A3A3A),
+    headlineSmall: GoogleFonts.ibmPlexSans(
+      fontSize: 22,
+      fontWeight: FontWeight.w300,
+      color: Color(0xFFF8F8F2),
     ),
-    bodyLarge: TextStyle(
-      fontFamily: 'Inter',
+    bodyLarge: GoogleFonts.manrope(
+      fontSize: 18,
+      fontWeight: FontWeight.w200, // ✅ Lightweight for smooth UI
+      color: Color(0xFFF8F8F2),
+    ),
+    bodyMedium: GoogleFonts.manrope(
       fontSize: 16,
-      fontWeight: FontWeight.normal,
-      color: Color(0xFF3A3A3A),
+      fontWeight: FontWeight.w200,
+      color: Color(0xFFA6E22E), // Monokai Green
     ),
-    bodyMedium: TextStyle(
-      fontFamily: 'Inter',
+    bodySmall: GoogleFonts.overpass(
       fontSize: 14,
-      fontWeight: FontWeight.normal,
-      color: Color(0xFFA69CAC), // Muted Lavender Text
-    ),
-    bodySmall: TextStyle(
-      fontFamily: 'Inter',
-      fontSize: 12,
-      fontWeight: FontWeight.normal,
-      color: Color(0xFFD4C1EC), // Light Orchid Accent
-    ),
-  ),
-
-  /// **Bottom Navigation Bar (Subtle, Dreamlike)**
-  bottomNavigationBarTheme: BottomNavigationBarThemeData(
-    backgroundColor: Color(0xFFE6E9F0),
-    selectedItemColor: Color(0xFFA69CAC), // Lavender
-    unselectedItemColor: Color(0xFFD4C1EC), // Light Orchid
-    selectedLabelStyle: TextStyle(fontFamily: 'SpaceGrotesk', fontSize: 14),
-    unselectedLabelStyle: TextStyle(fontFamily: 'SpaceGrotesk', fontSize: 12),
-  ),
-
-  /// **Floating Action Button (Ethereal Glow)**
-  floatingActionButtonTheme: FloatingActionButtonThemeData(
-    backgroundColor: Color(0xFFA69CAC),
-    foregroundColor: Colors.white,
-    elevation: 2,
-  ),
-
-  /// **Card Theme (Soft, Airy, Floating)**
-  cardTheme: CardTheme(
-    color: Color(0xFFF7F7F7), // Gentle Cloud White
-    elevation: 3,
-    shadowColor: Color(0xFFD4C1EC).withOpacity(0.3), // Soft glow effect
-    shape: RoundedRectangleBorder(
-      borderRadius:
-          BorderRadius.circular(16), // More rounded for dreamlike feel
+      fontWeight: FontWeight.w200,
+      color: Color(0xFF66D9EF), // Monokai Blue
     ),
   ),
 );

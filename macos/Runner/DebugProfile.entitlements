@@ -9,4 +9,26 @@
 	<key>com.apple.security.network.server</key>
 	<true/>
 </dict>
+<dict>
+    <!-- Other entitlements might already be here -->
+    
+    <!-- Add or modify the following -->
+    <key>com.apple.security.app-sandbox</key>
+    <true/>
+    <key>com.apple.security.network.client</key>
+    <true/>
+    
+    <!-- If you access camera/photos/etc, you might need these additional entitlements -->
+    <!-- <key>com.apple.security.device.camera</key>
+    <true/> -->
+</dict>
+
+<!-- For iOS: Make sure these keys are in ios/Runner/Info.plist -->
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+    <key>NSAllowsLocalNetworking</key>
+    <true/>
+</dict>
 </plist>

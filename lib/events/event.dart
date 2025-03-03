@@ -1,43 +1,59 @@
-enum EventSegmentFormat { text, image, video }
+import 'package:flutter/material.dart';
 
-/// Event segments are the building blocks of an event.
-/// They can be text, images, or videos that are packaged
-/// neatly with a title and emanate from a widget or view typically.
-class EventSegment {
+/// Base class for event segments
+abstract class EventSegment {
   final String title;
-  final EventSegmentFormat format;
-  String? content;
-  String? videoUrl;
-  String? imageUrl;
 
-  EventSegment(
-      {required this.title,
-      required this.format,
-      this.content,
-      this.videoUrl,
-      this.imageUrl});
+  EventSegment({required this.title});
 }
 
-/// Text event segment is a text post fragment.
+/// Text segment for events
 class TextSegment extends EventSegment {
-  TextSegment({required String title, required String content})
-      : super(title: title, format: EventSegmentFormat.text, content: content);
+  final String content;
+
+  TextSegment({
+    required String title,
+    required this.content,
+  }) : super(title: title);
 }
 
-class VideoSegment extends EventSegment {
-  VideoSegment({required String title, required String videoUrl})
-      : super(
-            title: title, format: EventSegmentFormat.video, videoUrl: videoUrl);
-}
-
+/// Image segment for events
 class ImageSegment extends EventSegment {
-  ImageSegment({required String title, required String imageUrl})
-      : super(
-            title: title, format: EventSegmentFormat.image, imageUrl: imageUrl);
+  final String imageUrl;
+
+  ImageSegment({
+    required String title,
+    required this.imageUrl,
+  }) : super(title: title);
 }
 
-abstract class Event {
+/// Video segment for events
+class VideoSegment extends EventSegment {
+  final String videoUrl;
+
+  VideoSegment({
+    required String title,
+    required this.videoUrl,
+  }) : super(title: title);
+}
+
+/// A segment that displays a colored box instead of loading images
+/// This avoids network dependencies while still testing layout
+class ColorBoxSegment extends EventSegment {
+  final Color color;
+  final double height;
+  final String? imagePath; // New property for image path
+
+  ColorBoxSegment({
+    required super.title,
+    required this.color,
+    this.height = 150.0,
+    this.imagePath, // Optional image path
+  });
+}
+
+class Event {
   final String id;
   final String private_key;
-  Event(this.id, this.private_key); // All events will have a private key
+  Event(this.id, this.private_key);
 }

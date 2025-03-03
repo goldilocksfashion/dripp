@@ -33,6 +33,39 @@ To get started with this project, follow these steps:
     flutter run
     ```
 
+### 
+Some details on whats at work here (more detailed documentation to follow):
+
+```ascii 
+         ┌───────────────┐     ┌──────────────┐
+        │ P2P Sync (Rust)│ --> │ L1 Ring Buffer │
+        └─────────────── ┘     └──────────────┘
+                  │
+                  ▼
+       (mmap) MemTable / SSTable (Rust)
+                  │
+                  ▼
+     ┌─────────────────────┐
+     │ Dart Isolate (FFI)  │  <-- Runs in background
+     └─────────────────────┘
+                  │
+                  ▼
+     ┌──────────────────────┐
+     │ RxDart Stream (Push) │  <-- Streams new posts
+     └──────────────────────┘
+                  │
+                  ▼
+     ┌──────────────────────┐
+     │ EventBuffer<T> (Cache)│  <-- Keeps 100 posts in memory
+     └──────────────────────┘
+                  │
+                  ▼
+     ┌──────────────────────┐
+     │ GridView (Flutter UI) │  <-- Updates only affected tiles
+     └──────────────────────┘
+
+```
+
 ### Contributing
 
 Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.
