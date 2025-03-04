@@ -1,30 +1,146 @@
 PODS:
+  - DynamsoftBarcodeReader (10.4.20)
+  - DynamsoftBarcodeReaderBundle (10.4.2003):
+    - DynamsoftBarcodeReader (= 10.4.20)
+    - DynamsoftCameraEnhancer (= 4.2.20)
+    - DynamsoftCaptureVisionRouter (= 2.4.21)
+    - DynamsoftCore (= 3.4.20)
+    - DynamsoftImageProcessing (= 2.4.20)
+    - DynamsoftLicense (= 3.4.40)
+    - DynamsoftUtility (= 1.4.20)
+  - DynamsoftCameraEnhancer (4.2.20)
+  - DynamsoftCaptureVisionRouter (2.4.21)
+  - DynamsoftCore (3.4.20)
+  - DynamsoftImageProcessing (2.4.20)
+  - DynamsoftLicense (3.4.40)
+  - DynamsoftUtility (1.4.20)
   - Flutter (1.0.0)
+  - flutter_barcode_sdk (3.0.0):
+    - DynamsoftBarcodeReaderBundle (= 10.4.2003)
+    - Flutter
+  - GoogleDataTransport (10.1.0):
+    - nanopb (~> 3.30910.0)
+    - PromisesObjC (~> 2.4)
+  - GoogleMLKit/BarcodeScanning (7.0.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitBarcodeScanning (~> 6.0.0)
+  - GoogleMLKit/MLKitCore (7.0.0):
+    - MLKitCommon (~> 12.0.0)
+  - GoogleToolboxForMac/Defines (4.2.1)
+  - GoogleToolboxForMac/Logger (4.2.1):
+    - GoogleToolboxForMac/Defines (= 4.2.1)
+  - "GoogleToolboxForMac/NSData+zlib (4.2.1)":
+    - GoogleToolboxForMac/Defines (= 4.2.1)
+  - GoogleUtilities/Environment (8.0.2):
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Logger (8.0.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (8.0.2)
+  - GoogleUtilities/UserDefaults (8.0.2):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GTMSessionFetcher/Core (3.5.0)
+  - MLImage (1.0.0-beta6)
+  - MLKitBarcodeScanning (6.0.0):
+    - MLKitCommon (~> 12.0)
+    - MLKitVision (~> 8.0)
+  - MLKitCommon (12.0.0):
+    - GoogleDataTransport (~> 10.0)
+    - GoogleToolboxForMac/Logger (< 5.0, >= 4.2.1)
+    - "GoogleToolboxForMac/NSData+zlib (< 5.0, >= 4.2.1)"
+    - GoogleUtilities/Logger (~> 8.0)
+    - GoogleUtilities/UserDefaults (~> 8.0)
+    - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
+  - MLKitVision (8.0.0):
+    - GoogleToolboxForMac/Logger (< 5.0, >= 4.2.1)
+    - "GoogleToolboxForMac/NSData+zlib (< 5.0, >= 4.2.1)"
+    - GTMSessionFetcher/Core (< 4.0, >= 3.3.2)
+    - MLImage (= 1.0.0-beta6)
+    - MLKitCommon (~> 12.0)
+  - mobile_scanner (6.0.2):
+    - Flutter
+    - GoogleMLKit/BarcodeScanning (~> 7.0.0)
+  - nanopb (3.30910.0):
+    - nanopb/decode (= 3.30910.0)
+    - nanopb/encode (= 3.30910.0)
+  - nanopb/decode (3.30910.0)
+  - nanopb/encode (3.30910.0)
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
+  - PromisesObjC (2.4.0)
   - video_player_avfoundation (0.0.1):
     - Flutter
     - FlutterMacOS
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
+  - flutter_barcode_sdk (from `.symlinks/plugins/flutter_barcode_sdk/ios`)
+  - mobile_scanner (from `.symlinks/plugins/mobile_scanner/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - video_player_avfoundation (from `.symlinks/plugins/video_player_avfoundation/darwin`)
+
+SPEC REPOS:
+  trunk:
+    - DynamsoftBarcodeReader
+    - DynamsoftBarcodeReaderBundle
+    - DynamsoftCameraEnhancer
+    - DynamsoftCaptureVisionRouter
+    - DynamsoftCore
+    - DynamsoftImageProcessing
+    - DynamsoftLicense
+    - DynamsoftUtility
+    - GoogleDataTransport
+    - GoogleMLKit
+    - GoogleToolboxForMac
+    - GoogleUtilities
+    - GTMSessionFetcher
+    - MLImage
+    - MLKitBarcodeScanning
+    - MLKitCommon
+    - MLKitVision
+    - nanopb
+    - PromisesObjC
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
+  flutter_barcode_sdk:
+    :path: ".symlinks/plugins/flutter_barcode_sdk/ios"
+  mobile_scanner:
+    :path: ".symlinks/plugins/mobile_scanner/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
   video_player_avfoundation:
     :path: ".symlinks/plugins/video_player_avfoundation/darwin"
 
 SPEC CHECKSUMS:
+  DynamsoftBarcodeReader: 263b1e79006c744d0c8176f73f4a0120acf211f0
+  DynamsoftBarcodeReaderBundle: c52ce64a4b3ebae11db63e96d6c35b3cb8d6157f
+  DynamsoftCameraEnhancer: 1596cc10a8a9495dbdaf8a257354aeb06ab8c180
+  DynamsoftCaptureVisionRouter: c8ab2b484e45c9cf58ea86962ea182cd46047302
+  DynamsoftCore: 958f8f530011d20a6b935ec770d483c4668e6929
+  DynamsoftImageProcessing: 36a0ebede82ffebec815465d0a617c33867eb15a
+  DynamsoftLicense: 4eabe8e077a64b38c8fdcf6177236bc018bac9a0
+  DynamsoftUtility: 20af5997992f4ea3b1a8ab3f24cf3121275c52c9
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_barcode_sdk: 50c91d29262847c21bc1dd52a8490158345d79f9
+  GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
+  GoogleMLKit: eff9e23ec1d90ea4157a1ee2e32a4f610c5b3318
+  GoogleToolboxForMac: d1a2cbf009c453f4d6ded37c105e2f67a32206d8
+  GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
+  GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
+  MLImage: 0ad1c5f50edd027672d8b26b0fee78a8b4a0fc56
+  MLKitBarcodeScanning: 0a3064da0a7f49ac24ceb3cb46a5bc67496facd2
+  MLKitCommon: 07c2c33ae5640e5380beaaa6e4b9c249a205542d
+  MLKitVision: 45e79d68845a2de77e2dd4d7f07947f0ed157b0e
+  mobile_scanner: af8f71879eaba2bbcb4d86c6a462c3c0e7f23036
+  nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
   path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564
+  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   video_player_avfoundation: 2cef49524dd1f16c5300b9cd6efd9611ce03639b
 
-PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+PODFILE CHECKSUM: f2095d9946016fd9e5adc1075579dbb37c2bbacc
 
 COCOAPODS: 1.16.2
