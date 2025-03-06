@@ -8,7 +8,11 @@ class EventBuffer<T> {
   final int capacity;
   int size = 0;
   final List<T?> _buffer;
+
+  @pragma('vm:cache-align')
   int read_index = 0;
+
+  @pragma('vm:cache-align')
   int write_index = 0;
 
   final StreamController<T> sc = StreamController<T>.broadcast();

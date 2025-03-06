@@ -55,5 +55,6 @@ class ColorBoxSegment extends EventSegment {
 class Event {
   final String id;
   final String private_key;
+  final int creationDate = DateTime.now().millisecondsSinceEpoch;
   Event(this.id, this.private_key);
 }

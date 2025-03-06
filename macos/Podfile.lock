@@ -1,5 +1,7 @@
 PODS:
   - DCV (1.0.1)
+  - file_selector_macos (0.0.1):
+    - FlutterMacOS
   - flutter_barcode_sdk (3.0.0):
     - DCV
     - FlutterMacOS
@@ -14,6 +16,7 @@ PODS:
     - FlutterMacOS
 
 DEPENDENCIES:
+  - file_selector_macos (from `Flutter/ephemeral/.symlinks/plugins/file_selector_macos/macos`)
   - flutter_barcode_sdk (from `Flutter/ephemeral/.symlinks/plugins/flutter_barcode_sdk/macos`)
   - FlutterMacOS (from `Flutter/ephemeral`)
   - mobile_scanner (from `Flutter/ephemeral/.symlinks/plugins/mobile_scanner/macos`)
@@ -25,6 +28,8 @@ SPEC REPOS:
     - DCV
 
 EXTERNAL SOURCES:
+  file_selector_macos:
+    :path: Flutter/ephemeral/.symlinks/plugins/file_selector_macos/macos
   flutter_barcode_sdk:
     :path: Flutter/ephemeral/.symlinks/plugins/flutter_barcode_sdk/macos
   FlutterMacOS:
@@ -38,6 +43,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DCV: f089520158c868b71bd8a850df223681674d7edb
+  file_selector_macos: 6280b52b459ae6c590af5d78fc35c7267a3c4b31
   flutter_barcode_sdk: c6339a9fa2e0b3696655671af342299de3ac4382
   FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
   mobile_scanner: 0e365ed56cad24f28c0fd858ca04edefb40dfac3
