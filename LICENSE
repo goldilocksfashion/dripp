@@ -1,23 +1,61 @@
+BUSINESS SOURCE LICENSE 1.1
+=================================
 
-Mozilla Public License Version 2.0
-==================================
+Dripp - Decentralized, Peer to Peer, privacy focussed Social Network
+Copyright (c) 2025 Goldilocks Fashion LLC.
 
-1. Definitions
---------------
+1. LICENSE GRANT
+-----------------
+Subject to the terms and conditions of this Business Source License (the "BUSL"),
+[YOUR COMPANY] ("Licensor") hereby grants you a non-exclusive, non-transferable,
+limited license to use, copy, modify, and distribute the [Dripp App Dart Code]
+(the "Software") for non-commercial purposes only, subject to the restrictions
+set forth in Section 2, until the Change Date defined below.
 
-1.1. "Contributor"
-    means each individual or legal entity that creates, contributes to the creation of, or owns Covered Software.
+2. RESTRICTIONS
+----------------
+(a) You may not use the Software for any commercial purpose or incorporate it
+    into any commercial product or service.
+(b) You may not offer the Software as a service or as a component of any
+    service that competes with [YOUR COMPANY]'s offerings.
+(c) Any modifications or derivative works of the Software must clearly
+    acknowledge that such work is derived from the original Software.
+(d) You must retain all copyright, patent, and other notices from the original
+    Software in any copies or substantial portions of the Software.
 
-1.2. "Contributor Version"
-    means the combination of the Contributions of others (if any) used by a Contributor and that particular Contributor's Contribution.
+3. CHANGE DATE
+---------------
+The "Change Date" for the Software is set to 2030-05-11. On or after the Change Date,
+the Software will be automatically relicensed under the terms of the [OPEN SOURCE LICENSE
+NAME, e.g., Apache License 2.0]. Until that time, your rights and obligations under this
+BUSL continue to apply.
 
-1.3. "Contribution"
-    means Covered Software of a particular Contributor.
+4. TERMINATION
+---------------
+If you violate any of the terms of this License, your rights under this License will
+terminate automatically and you must immediately cease all use of the Software.
 
-1.4. "Covered Software"
-    means Source Code Form to which the initial Contributor has attached the notice in Exhibit A, the Executable Form of such Source Code Form, and Modifications of such Source Code Form, in each case including portions thereof.
+5. NO WARRANTY
+---------------
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL [YOUR COMPANY] BE LIABLE FOR ANY CLAIM,
+DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE,
+ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
 
-1.5. "Incompatible With Secondary Licenses"
-    means...
+6. MISCELLANEOUS
+-----------------
+(a) This License constitutes the entire agreement between you and [YOUR COMPANY]
+    with respect to the Software, and supersedes all prior or contemporaneous understandings,
+    agreements, representations, and warranties, whether written or oral.
+(b) If any provision of this License is held to be unenforceable, such provision shall be
+    reformed only to the extent necessary to make it enforceable.
+(c) Any modifications to or copies of the Software that you make must include a prominent
+    notice stating that you have modified the Software and the date of such modification.
 
-[The full text of the Mozilla Public License Version 2.0 is quite long. You can find the complete license text at https://www.mozilla.org/en-US/MPL/2.0/]
+For questions regarding this License, please contact:
+[YOUR COMPANY CONTACT INFORMATION]
+
+=================================
+BUSINESS SOURCE LICENSE 1.1 – END
