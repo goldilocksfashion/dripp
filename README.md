@@ -81,9 +81,9 @@ Some details on whats at work here (more detailed documentation to follow):
 ```
 
 ### Contributing
-
-Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.
+This initiative is powered by blockxaero open source projects here: https://github.com/block-xaero
+Head over there to contribute in building privacy focussed social networks or any other dreams of cloudless, privacy focussed apps you wish to for better of community.
 
 ### License
 
-This project is licensed under the Mozilla Public License 2.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Business Source License (All underlying plumbing is MPL v 2 (see block-xaero for more details) - see the [LICENSE](LICENSE) file for details.
