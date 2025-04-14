@@ -37,32 +37,46 @@ To get started with this project, follow these steps:
 Some details on whats at work here (more detailed documentation to follow):
 
 ```ascii 
-         ┌───────────────┐     ┌──────────────┐
-        │ P2P Sync (Rust)│ --> │ L1 Ring Buffer │
-        └─────────────── ┘     └──────────────┘
-                  │
-                  ▼
-       (mmap) MemTable / SSTable (Rust)
-                  │
-                  ▼
-     ┌─────────────────────┐
-     │ Dart Isolate (FFI)  │  <-- Runs in background
-     └─────────────────────┘
-                  │
-                  ▼
-     ┌──────────────────────┐
-     │ RxDart Stream (Push) │  <-- Streams new posts
-     └──────────────────────┘
-                  │
-                  ▼
-     ┌──────────────────────┐
-     │ EventBuffer<T> (Cache)│  <-- Keeps 100 posts in memory
-     └──────────────────────┘
-                  │
-                  ▼
-     ┌──────────────────────┐
-     │ GridView (Flutter UI) │  <-- Updates only affected tiles
-     └──────────────────────┘
+               ┌────────────────────────────────────────────────┐
+             │  ZeroID + OneChain + Xaeroflux (dripp‑backend) │
+             │                                                │
+             │  • Identity (DID, zk proofs)                   │
+             │  • Blockchain (OneChain, NFTs, anchoring)      │
+             │  • Data Sync, Merkle‑based diffs, integrated     │
+             │    network (P2P with IPv6/QUIC/Tor fallbacks)    │
+             └────────────────────────────────────────────────┘
+                                 │
+                                 ▼
+             ┌────────────────────────────────────────────────┐
+             │  Crossbeam Bounded Channel                     │
+             │  (Acts as an event ring buffer; equivalent to    │
+             │   a ring buffer in traditional architectures)  │
+             └────────────────────────────────────────────────┘
+                                 │
+                                 ▼
+             ┌────────────────────────────────────────────────┐
+             │  Dart Isolate (FFI Bridge)                     │
+             │  (Runs in the background, enabling FFI         │
+             │   communication with the Flutter app)          │
+             └────────────────────────────────────────────────┘
+                                 │
+                                 ▼
+             ┌────────────────────────────────────────────────┐
+             │  RxDart Stream (Push Model)                    │
+             │  (Streams new posts to the Flutter UI)         │
+             └────────────────────────────────────────────────┘
+                                 │
+                                 ▼
+             ┌────────────────────────────────────────────────┐
+             │  EventBuffer<T> (In-Memory Cache)              │
+             │  (Keeps the latest ~100 posts available)       │
+             └────────────────────────────────────────────────┘
+                                 │
+                                 ▼
+             ┌────────────────────────────────────────────────┐
+             │  GridView (Flutter UI Layer)                   │
+             │  (Updates only affected tiles on-screen)       │
+             └────────────────────────────────────────────────┘
 
 ```
 
