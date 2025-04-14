@@ -3,6 +3,7 @@ import 'package:dripp/events/event_buffer.dart';
 import 'package:dripp/events/group_event.dart';
 import 'package:dripp/events/post_event.dart';
 
+///
 final class EventBus {
   EventBus._internal();
   static final EventBus _instance = EventBus._internal();
